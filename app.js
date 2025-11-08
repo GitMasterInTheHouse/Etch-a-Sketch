@@ -14,4 +14,14 @@ function generateGrid(numOfCols) {
   }
 }
 
+function draw() {
+  const columns = document.querySelectorAll(".column");
+  columns.forEach((column) => {
+    column.addEventListener("mouseover", (e) => {
+      e.target.style.backgroundColor = "red";
+    });
+  });
+}
+
 generateGrid(gridSize);
+draw();
